@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--icone da aplicação-->
+	<link rel="shortcut icon" href="{{url_for('static',filename ='./res/favicon.ico')}}" type="image/x-icon" />
+
+
+
+	<!--bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!--estilos css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/estilo.css')}}">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)"
+		href="{{ url_for('static', filename='./css/estilo_mobile.css')}}">
+
+
+
+	<!--firebase-->
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js" type="module"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js" type="module"></script>
+
+
+	<!--javascript-->
+	<script type='module' src="{{url_for('static',filename='./identificador.js')}}"></script>
+	<script type='module' src="{{url_for('static',filename='./buttons-controls.js')}}"></script>
+	<script type='module' src="{{url_for('static',filename='./generate-device')}}"></script>
+
+
+	<title>Insert Device</title>
+</head>
+
+<body id="other_background">
+	<div id="restrict">
+		<h3>Acesse restrito a desktop</h3>
+	</div>
+
+	<section class="lista_menu">
+		<ul>
+			<!--Opções são exclusivas da pagina controle de estoque-->
+			<li class="btn btn-success" id="cal-insert-db"> <a id="style_link" href="#"> Criar novo
+					equipamento</a></li>
+			<li class="btn btn-success" id="transações"><a id="style_link" href="/controle-de-estoque">Informar
+					Transação</a></li>
+			<li class="btn btn-success no-action" id="estoque">Meu Estoque</li>
+			<li class="btn btn-success no-action" id="saida">Historico de retiradas</li>
+			<li class="btn btn-success no-action" id="entrada">Historico de entradas</li>
+			<li class="btn btn-success no-action" id="total">Totais</li>
+			<li class="btn btn-success" id="cal-acess-master"><a id="style_link" href="/acess-master"> Acesso
+					Restrito</a></li>
+			<li id="user-info">
+				<h3 id="nome-logged"></h3>
+				<input type="button" id="option-exit" value="sair?">
+			</li>
+		</ul>
+	</section>
+	<header>
+		<h1 id="title_aplication">SBI INVENTARY</h1>
+	</header>
+	<section id="insertion">
+		<h2 id="titulo_insert">Cadastro de Equipamentos</h2>
+		<div id="form_insert">
+			<form class="text-center">
+				<input class="input-field" id="name-device" type="text" name="text_input" style="width:50%;"
+					placeholder="Digite o nome do equipamento que deseja adicionar">
+				<input class="input-field" id="btn-add-device" type="button" style="width:auto;" value="Insert in bank">
+				<a href="controle-de-estoque.html">
+					<input class="input-field" type="button" style="width:auto;" value="voltar" id="btn-voltar"></a>
+		</div>
+		</form>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrapo-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+    <!--estilos css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/estilo.css')}}">
+    <link rel="stylesheet" type="text/css"  media="screen and (max-width: 480px)" href="{{ url_for('static', filename='./css/estilo_mobile.css')}}">
+    
+    <!--link da aplicação-->
+	<link rel="shortcut icon" href="{{url_for('static',filename ='./res/favicon.ico')}}" type="image/x-icon" />
+
+
+    <!--firebase-->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js" type="module"></script>
+    
+    
+    
+    <script type="module" src="{{url_for('static',filename ='./program/buttons-controls.js')}}"></script>
+    <script type="module" src="{{url_for('static',filename = './program/Manager_users.js')}}"></script>
+    <script type="module" src="{{url_for('static',filename ='./program/identificador.js')}}"></script>
+
+  
+    <title>Private</title>
+</head>
+<body id="other_background" onselectstart="return false">
+    <div id="conteudo-private">
+
+        <section class="lista_menu">
+			<ul>
+				<!--Opções são exclusivas da pagina controle de estoque-->
+				<li class="btn btn-success" id="cal-insert-db"> <a id="style_link" href="/insert-device"> Criar novo
+						equipamento</a></li>
+                        <li class="btn btn-success" id="transações"><a id="style_link" href="/controle-de-estoque">Informar Transação</a></li>
+				<li class="btn no-action" id="estoque">Meu Estoque</li>
+				<li class="btn  no-action" id="saida">Historico de retiradas</li>
+				<li class="btn  no-action" id="entrada">Historico de entradas</li>
+				<li class="btn  no-action" id="total">Totais</li>
+				<li class="btn btn-success" id="cal-acess-master"><a id="style_link" href="acess-master.html"> Acesso
+						Restrito</a></li>
+						<li id="user-info">
+							<h3 id="nome-logged"></h3>
+		                 	<input type="button" id="option-exit" value="sair?">
+						</li>
+			</ul>
+		</section>
+        <header>
+            <header>
+                <h1 id="title_aplication">SBI INVENTARY</h1>
+            </header>
+            <h1 id="title-private">Acesso Master</h1>
+            <section id="new-user">
+                <h4>Novo Usuario</h4>
+                <form>
+                    <input type="text" placeholder="Digite o e-mail" class="input-field" id="new-email">
+                    <input type="text" placeholder="escolha uma senha" class="input-field" id="defition-senha">
+                    <input type="text" placeholder="Digite a senha novamente" class="input-field" id="senha-bis">
+                    <input type="text" placeholder="Digite um nome de usuario" class="input-field" id="ns">
+                    <input type="text" id="group" placeholder="digite o nome da empresa" class="input-field">
+                    <hr>
+                    <input type="button" value="Associar Novo Usuario" class="btn btn-outline-secondary" id="bt-create_user">
+                    <input type="button" value="Cancelar" class="btn btn-outline-secondary" id="cancel-create" >
+                </form>
+            </section>
+            <!--section id="calc-timer">
+                <h2>Calculo Trial</h2>
+                <label for="timer">Defina tempo de teste</label><br>
+                <input type="text">dias<br>
+                <input type="button" value="Definir tempo"><br><br><br>
+                <a href="index.html"><input type="button" value="voltar"></a>
+            </section-->
+    
+        </header>
+        <!--seção da pagina para gerar usuarios-->
+       
+        <footer class="text-center">
+            Todos os direitos reservados &#169
+            <span id="version">versão: 2.0.0</span>
+        </footer>
+</body>
+
+</html>

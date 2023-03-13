@@ -1,0 +1,84 @@
+body #other_background{
+	background-image: url('../res/textura.webp');
+	background-repeat: repeat-y;
+}
+.loguin{
+	position:fixed;
+    width:90%;
+    top:30%;
+    left:5%;
+    border:1px solid rgb(253, 252, 252);
+    padding:10px;
+    text-align: center;
+    background-color:rgba(229, 229, 238, 0.618);
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+#title_control{
+	color:white;
+	border:1px solid white;
+	background-color: rgba(137, 30, 30, 0.444);
+	font-size:200%;
+	font-weight: bold;
+	border-radius: 1%;
+}
+
+
+
+.mb-3{
+	display:block;
+	text-align: center;
+	padding:1.5%;
+	padding-bottom: 3%;
+	margin-top: 30%;
+	border-radius:3%;
+	background-color:rgba(48, 32, 220, 0.41);
+}
+
+.mb-3 label{
+	font-size: 150%;
+	font-weight: bold;
+	color:white;
+}
+
+.mb-3 input{
+padding:4%;
+font-size: 120%;
+border-radius:10px;
+font-weight: bold;
+}
+
+.mb-3 input[type=button]{
+	padding:1%;
+	font-size: 120%;
+	}
+
+.mb-3 select{
+	padding:4%;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#opt_estoque{
+	display:none;
+}
+#geral{
+	display:none;
+}
+
+footer{
+	display:none;
+}
+
+.lista_menu{
+	display:none;
+}
+
+#title_aplication{
+	display: none;
+}
+
+#insertion{
+	display:none;
+}

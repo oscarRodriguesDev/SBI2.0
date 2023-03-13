@@ -1,0 +1,338 @@
+/*titulo h1 na tela de entrada e saida de equipamentos*/
+#title_aplication {
+    text-align: center;
+    margin-left:auto;
+    padding-bottom: 0.1%;
+    margin-right:88%;
+    background-color: rgba(39, 8, 4, 0.768);
+
+    font-size:130%;
+   padding:auto;
+
+    color: rgb(254,224,225);
+    border:1px solid rgba(57, 10, 10, 0.429);
+}
+
+/*todo conteudo da tela de controle de estoque*/
+#conteudo_ctrl {
+    margin-left: 5%;
+   
+}
+
+
+/*todo o estilo da caixa e filhos do formulario de entrada e saida de equipamentos*/
+.mb-3 {
+    font-weight: bold;
+    text-align: center;
+   border-radius: 10px;
+    background-color: rgba(174,152,147,0.528);
+    border: 2px solid rgb(39,13,1);
+    margin-right: 9%;
+    margin-top:5%;
+    padding: 1.5%;
+}
+
+.mb-3{
+    display:block;
+}
+
+/*rodapé da pagina principal*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 70%;
+    color: rgb(254,224,225);
+    font-weight: bold;
+}
+
+/*numero da versão*/
+footer #version {
+
+    left: 80%;
+    font-size: 80%;
+}
+#transactions{
+    display:block;
+}
+
+
+
+/*layout de apresentação das saidas*/
+#saidas {
+    display: none;
+}
+
+/*layout de apresentação das entradas*/
+#entradas {
+    display: none;
+}
+
+/*layout de apresentação dos totais*/
+#totais {
+    display: none;
+}
+
+#geral {
+    display: none;
+}
+
+
+#style_link {
+    text-decoration: none;
+    color: rgb(254,224,225);
+}
+
+/*caixa de loguin na tela index*/
+.loguin {
+    position: fixed;
+    width: 20%;
+    top: 30%;
+    left: 39%;
+    border: 2px solid rgb(39,13,1);
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(174,152,147,0.528);
+    border-radius: 5%;
+    font-weight: bold;
+
+}
+
+/*inputs da caixa de loguins*/
+.loguin input {
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/*titulo na caixa de loguin*/
+#title_loguin {
+    font-size: 140%;
+    color: rgb(254,224,225);
+}
+
+/*backgrounds tela loguin*/
+#tela_loguin {
+    background-image: url('../res/fundo-vermelho-index.jpg');
+    background-color: rgba(201, 201, 253, 0.528);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*backgrounds geral*/
+#other_background {
+    background-color: grey;
+    background-image: url('../res/fundo-vermelho.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+
+}
+
+/*icones*/
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    color: rgb(39,13,1);
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/*deve ser apresentado apenas em dispositivos moveis*/
+#restrict {
+    display: none;
+}
+
+/*titulo na tela de inserção de equipamentos*/
+#titulo_insert {
+    color: rgb(254,224,225);
+    margin-left: 25%;
+    padding-bottom: 2%;
+
+}
+
+/*id da caixa de inserção de equipamentos*/
+#insertion {
+
+    margin-left: 14%;
+    margin-top: 15%;
+    width: 70%;
+    border: 1px solid rgb(39,13,1);
+    padding-right: 3%;
+    padding-bottom: 4%;
+    padding-top: 3%;
+    background-color: rgba(174,152,147,0.528);
+}
+
+
+
+/*todo o conteudo da tela */
+/*calculadora  de tempo de licença trial*/
+#new-user {
+    width: 25%;
+    margin-top:10%;
+    text-align: center;
+    border: 1px solid rgba(39,13,1);
+    border-radius: 2px;
+    background-color: rgba(174,152,147,0.528);
+    display: block;
+    color: rgb(254,224,225);
+    margin-left: 35%;
+    margin-right: 40%;
+    padding: 10px;
+}
+
+  /*titulo da tela privada*/
+  #title-private{
+    position:fixed;
+    margin-top: 1%;
+    margin-right: 1%;
+
+  }
+
+
+
+#new-user input {
+    width: 95%;
+}
+
+.btn-outline-secondary {
+
+    background-color: rgb(200, 236, 229);
+}
+
+
+/*titulo h1 da tela*/
+header h1 {
+    color: rgb(254,224,225);
+    margin-left: 38%;
+    padding-bottom: 3%;
+    font-size: 300%;
+}
+
+/*botoes de menu da tela de controle de estoque*/
+.btn-success{
+    color:rgb(254,224,225);
+    background-color: rgba(131,82,10,0.528);
+    border:1px solid rgb(39,13,1);
+    font-weight: bold;
+}
+
+/*botoes do menu mouse repousado*/
+.btn-success:hover{
+    background-color: rgb(131,82,10); 
+    border-color:rgb(254,224,225) ;
+    font-weight: bold;
+    
+}
+
+/*botoes do menu a serem excluidos das telas de acesso controlado*/
+.no-action{
+   background-color:rgb(123, 126, 114);
+   color:rgb(123, 126, 114);
+
+}
+
+.no-action[disabled] :hover{
+    color:red;
+}
+
+ hr{
+    color:rgb(39,13,1);
+ }
+
+
+
+/*estilos da tabela*/
+ table{
+    margin-left:-5%;
+ }
+
+ .lista_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.lista_menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lista_menu li {
+    margin-right: 10px;
+}
+
+.lista_menu li:last-child {
+    margin-right: 0;
+}
+
+.lista_menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lista_menu a:hover {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*estilizando o botão de informações do usuario*/
+
+  #user-info h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  /*botão de sair*/
+  #option-exit {
+    display: inline-block;
+    margin-left: 2px;
+    color: #fff;
+    background-color: #6c757d7c;
+    border-color: #6c757d;
+    border-radius: 4px;
+    cursor: default;
+    font-size: 60%;
+  }
+  
+  #option-exit :hover {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: aliceblue;
+    padding: 2px 5px;
+    color: #fff;
+    border-color: #6c757d;
+    border-radius: 4px;
+    cursor: default;
+  }
+

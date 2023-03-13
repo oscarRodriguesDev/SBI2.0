@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	
+	<!--estilos css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/estilo.css')}}">
+    <link rel="stylesheet" type="text/css"  media="screen and (max-width: 480px)" href="{{ url_for('static', filename='./css/estilo_mobile.css')}}">
+    
+	<!--icone da aplicação-->
+	<link rel="shortcut icon" href="{{url_for('static',filename ='./res/favicon.ico')}}" type="image/x-icon" />
+
+	<!--firebase-->
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js" type="module"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js" type="module"></script>
+	
+	<!--javascript-->
+	<script type="module" src="{{url_for('static', filename='./program/firebase-config.js')}}"></script>
+    <script type="module" src="{{url_for('static', filename='./program/objetos.js')}}"></script>
+	<script type="module" src="{{url_for('static', filename='./program/identificador.js')}}"></script>
+	<script type="module" src="{{url_for('static', filename='./program/buttons-controls.js')}}"></script>
+
+
+
+	<title>Controle de estoque</title>
+</head>
+
+<body class="body-control" id="other_background" onselectstart="return false">
+	<!--Barra superior onde fica o titulo do programa-->
+	<header>
+		<h1 id="title_aplication">SBI INVENTARY</h1>
+	</header>
+	
+	
+	
+
+	<!---->
+	<div class="container-fluid" id="conteudo_ctrl">
+		<!--menu lateral com informações importantes-->
+		<section class="lista_menu">
+			<ul>
+				<!--Opções são exclusivas da pagina controle de estoque-->
+				<li class="btn btn-success" id="cal-insert-db"> <a id="style_link" href="/insert-device"> Criar novo
+						equipamento</a></li>
+				<li class="btn btn-success" id="transações">Informar Transação</li>
+				<li class="btn btn-success" id="estoque">Meu Estoque</li>
+				<li class="btn btn-success" id="saida">Historico de retiradas</li>
+				<li class="btn btn-success" id="entrada">Historico de entradas</li>
+				<li class="btn btn-success" id="total">Totais</li>
+				<li class="btn btn-success" id="cal-acess-master"><a id="style_link" href="/acess-master"> Acesso
+						Restrito</a></li>
+						<li id="user-info">
+							<h3 id="nome-logged"></h3>
+		                 	<input type="button" id="option-exit" value="sair?">
+						</li>
+			</ul>
+		</section>
+		<!--fim das informações importantes-->
+		<!--seção area de trabalho-->
+		<section>
+			<div class="mb-3">
+				<section id="formulario">
+					<!--fim da seção de area de trabalho-->
+					<form>
+						<select name="equipamentos" class="form-control" id="select-device">
+							<option value ="">Escolha uma opção</option>
+						
+
+							<hr>
+						</select><br>
+
+						<hr>
+
+						<input type="number" class="form-control" placeholder="Numero de serie" id="serial-number"><br>
+
+						<hr>
+
+						<input id="data" tipe="text" readonly=“true” class="form-control" placeholder="dd/mm/aaaa"><br><br>
+						<!--Script para capturar a data atual-->
+						
+						<!--fim do script para capturar a data atual-->
+						<hr>
+						<div class="text-center">
+							<input type="button" value="Registrar Entrada" class="btn btn-outline-secondary" id="bt-enter">
+							<input type="button" value="Registrar Saída" class="btn btn-outline-secondary" id="bt-exit" >
+						</div>
+					</form>
+			</div>
+		</section>
+		<!--seção do estoque armazenado-->
+		<section id="transactions">
+			<span id="geral" class="text-center">
+				<h3>Todas as transações</h3>
+				<!--table class="table"> id que deve ser usado para table</table-->
+				<div id="opt_estoque">
+					<input type="button" value="Atualizar">
+					<input type="button" value="Esvaziar Todo Estoque">
+				</div>
+				<table  class="table table-striped table-dark">
+					<thead>
+					  <tr>
+						<th>Equipamento</th>
+						<th>Número de série</th>
+						<th>Data</th>
+						<th>Usuário</th>
+						<th>Transação</th>
+					  </tr>
+					</thead>
+					<tbody id="tabela-dados">
+					</tbody>
+				  </table>
+				  
+
+				</table>
+			</span>
+			<span id="saidas">
+				<h3>Saidas de equipamentos</h3>,
+				<!--table class="table">tabelas da saida de equipamentos</table-->
+				
+				<span><input type="button" value="Limpar"></span>
+			</span>
+			<span id="entradas">
+				<h3>Entradas de equipamentos</h3>
+				<!--table class="table">tabelas da entradas de equipamentos</table-->
+			</span>
+			<span id=totais>
+				<h3>Quantidades por equipamento</h3>
+				<!--table class="table">tabelas de totais</table-->
+			</span>
+		</section>
+		<!--fim da seção do estoque armazenado-->
+		<!--seção do rodape-->
+
+		<footer class="text-center">
+			Todos os direitos reservados &#169
+			<span id="version">versão: 2.0.0</span>
+		</footer>
+	</div>
+
+	<footer class="text-center">
+		Todos os direitos reservados &#169
+		<span id="version">versão: 2.0.0</span>
+	</footer>
+</body>
+
+</html>
